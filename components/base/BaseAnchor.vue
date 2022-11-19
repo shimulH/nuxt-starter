@@ -11,20 +11,18 @@
 const anchorProps = defineProps({
   text: {
     type: String,
-    default: ''
+    default: '',
   },
   to: {
     type: [String, Object],
-    default: undefined
+    default: undefined,
   },
   href: {
     type: String,
-    default: ''
-  }
-})
+    default: '',
+  },
+});
 
-const anchorHref = toRef(anchorProps, 'href')
-const anchorTo = toRef(anchorProps, 'to')
+const anchorHref = toRef(anchorProps, 'href');
+const anchorTo = toRef(anchorProps, 'to');
 </script>
-
-<style></style>

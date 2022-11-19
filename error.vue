@@ -7,8 +7,8 @@
 <script setup>
 // default props available on error.vue
 const props = defineProps({
-  error: Object
-})
+  error: Object,
+});
 
-const error = useError()
+const error = useError();
 </script>

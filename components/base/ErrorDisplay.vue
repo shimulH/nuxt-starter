@@ -12,29 +12,27 @@
 const props = defineProps({
   code: {
     type: Number,
-    default: 400
-  }
-})
+    default: 400,
+  },
+});
 
 const errorsMap = {
   400: 'Bad Request',
   401: 'Unauthorized',
   403: 'Forbidden',
-  404: 'Not Found'
-}
+  404: 'Not Found',
+};
 
 const error = computed(() => {
-  const { code } = props
+  const { code } = props;
   return {
     code,
-    message: errorsMap[code.toString()] || 'Unknown Error'
-  }
-})
+    message: errorsMap[code.toString()] || 'Unknown Error',
+  };
+});
 
 // clear error and redirect to home page
 const handleError = () => {
-  clearError({ redirect: '/' })
-}
+  clearError({ redirect: '/' });
+};
 </script>
-
-<style></style>
